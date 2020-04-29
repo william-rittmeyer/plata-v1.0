@@ -133,11 +133,14 @@ App = {
                 {from: App.account, gas: 5000000}
             ).on("transactionHash", hash => {
                 console.log("transaction hash", hash);
+                $('#modal-loading').attr('hidden', false)
                 //App.logBuyArticleEventListener = marketInstance.LogBuyArticle({fromBlock: '0'}).on("data", event => {
                     
             //    })
             });
             console.log("transaction receipt" + transactionReceipt);
+            $('#modal-loading').attr('hidden', true);
+            $('#modal-submission').attr('hidden', false);
 
         } catch(error) {
             console.error(error);
@@ -170,8 +173,6 @@ App = {
                 console.log("transaction hash", hash);
 
                 var number = 0;
-                var hashtag = 1;
-                
                 marketInstance.LogSellArticle({fromBlock: "0"}).on("data", async function(event) {
                 number++;    
               //  console.log(number);
@@ -180,11 +181,14 @@ App = {
                     console.log('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
                     console.log(event.returnValues._name);
                     console.log(event.returnValues._seller);
+                    $('#purchaselink').text('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
+                    $('#modal-loading').attr('hidden', false)
                 } else {
                     return
                 }});
 
 
+                
             });
                 
                 
@@ -194,14 +198,19 @@ App = {
                console.log(_articleId);
                console.log(event.returnValues);
                
+
                
+
                 });
+
             /*    console.log('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
                console.log(event.returnValues._name);
                console.log(event.returnValues._seller); */
                 
             
             console.log("transaction receipt", transactionReceipt);
+            $('#modal-loading').attr('hidden', true)
+            $('#modal-receipt').attr('hidden', false)
 
             
 
@@ -239,6 +248,7 @@ App = {
             console.error(error);
         }
     },
+
 
 
     reloadArticles: async () => {
@@ -290,6 +300,24 @@ App = {
 
         // add this new article
         articlesRow.append(articleTemplate.html());
+    },
+
+    CloseReceipt: async () => {
+        $('#modal-receipt').attr('hidden', true)
+        console.log('hello')
+
+    },
+
+    CloseSubmission: async () => {
+        $('#modal-submission').attr('hidden', true)
+        console.log('closed submission')
+
+    },
+
+    CloseWindow: async () => {
+        $('#modal-loading').attr('hidden', true)
+        console.log('hello')
+
     },
     
 };
