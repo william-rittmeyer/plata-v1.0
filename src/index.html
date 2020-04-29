@@ -248,8 +248,9 @@
 
     
   <div class="modal-loading" id ="modal-loading" hidden="true">
-      <h1> Please wait as the transaction is processed :)</h1>
+      <h1> Please wait as the transaction is processed</h1>
 
+      <div class = "loading-animation">
       <div class="sk-grid">
         <div class="sk-grid-cube"></div>
         <div class="sk-grid-cube"></div>
@@ -262,7 +263,9 @@
         <div class="sk-grid-cube"></div>
       </div>
 
-      <button type="button" class="close" onclick="App.CloseWindow();">&times;</button>
+    </div>
+
+      <button type="button" class="modal-close" onclick="App.CloseWindow();">&times;</button>
     </div>
   </div>
 
@@ -270,7 +273,7 @@
   <div class="modal-submission" id ="modal-submission" hidden="true">
     <div id= "modal-sale" >
       <h1> Your file has successfully been put up for sale</h1>
-          <button type="button" class="close" onclick="App.CloseSubmission();">&times;</button>
+          <button type="button" class="modal-close" onclick="App.CloseSubmission();">&times;</button>
     </div>
   </div>
   
@@ -278,8 +281,13 @@
     <div id= "modal-purchase" >
       <h1> Thank you for your purchase!</h1>
       <h3 id ="purchaselink"></h2>
-          <button type="button" class="close" onclick="App.CloseReceipt();">&times;</button>
+          <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
     </div>
+  </div>
+
+  <div class="modal-error" id ="modal-erro" hidden="true">
+      <h1> Whoops! Looks like something went wrong.</h1>
+          <button type="button" class="modal-close" onclick="App.CloseReceipt();">&times;</button>
   </div>
 
  
