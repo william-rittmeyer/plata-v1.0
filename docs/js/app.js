@@ -179,14 +179,12 @@ App = {
                 if (number == _articleId){
                     console.log('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
                     console.log(event.returnValues._name);
-                    hashtag = event.returnValues._hashvalue;
                     console.log(event.returnValues._seller);
                 } else {
                     return
                 }});
 
 
-                console.log(hashtag);
             });
                 
                 
@@ -196,18 +194,14 @@ App = {
                console.log(_articleId);
                console.log(event.returnValues);
                
-
                
-
                 });
-
             /*    console.log('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
                console.log(event.returnValues._name);
                console.log(event.returnValues._seller); */
                 
             
             console.log("transaction receipt", transactionReceipt);
-            console.log(hashtag);
 
             
 
