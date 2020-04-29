@@ -175,12 +175,12 @@ App = {
                 var number = 0;
                 marketInstance.LogSellArticle({fromBlock: "0"}).on("data", async function(event) {
                 number++;    
-              //  console.log(number);
+                //console.log(number);
                 //console.log(_articleId);
                 if (number == _articleId){
-                    console.log('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
-                    console.log(event.returnValues._name);
-                    console.log(event.returnValues._seller);
+                  //console.log('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
+                    //console.log(event.returnValues._name);
+                    //console.log(event.returnValues._seller);
                     $('#purchaselink').text('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
                     $('#modal-loading').attr('hidden', false)
                 } else {
