@@ -170,6 +170,8 @@ App = {
                 console.log("transaction hash", hash);
 
                 var number = 0;
+                var hashtag = 1;
+                
                 marketInstance.LogSellArticle({fromBlock: "0"}).on("data", async function(event) {
                 number++;    
               //  console.log(number);
@@ -177,13 +179,14 @@ App = {
                 if (number == _articleId){
                     console.log('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
                     console.log(event.returnValues._name);
+                    hashtag = event.returnValues._hashvalue;
                     console.log(event.returnValues._seller);
                 } else {
                     return
                 }});
 
 
-                
+                console.log(hashtag);
             });
                 
                 
@@ -204,6 +207,7 @@ App = {
                 
             
             console.log("transaction receipt", transactionReceipt);
+            console.log(hashtag);
 
             
 
