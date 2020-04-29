@@ -389,15 +389,57 @@
     transition: all 5s ease-in-out;
 }
 
+.modal-submission h1{
+    
+    font-size: 20px;
+    position: absolute;
+    top:50px;
+
+}
+
 .modal-loading{
 
-    height: 600px;
-    width: 650px;
+    height: 400px;
+    width: 400px;
     position: absolute;
     left: 700px;
     top:200px;
     background: white;
     transition: all 5s ease-in-out;
+
+}
+
+.modal-loading h1{
+
+    font-size: 20px;
+    position: absolute;
+    top:50px;
+
+}
+
+.modal-error{
+
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: 700px;
+    top:200px;
+    background: white;
+    transition: all 5s ease-in-out;
+
+}
+
+
+
+.loading-animation{
+
+    
+    position: absolute;
+    left: 160px;
+    top:200px;
+
+
+
 }
 
 .modal .close{
@@ -410,6 +452,18 @@
     text-decoration: none;
     color: #333;
   }
+
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
 
 .collapse {
     list-style-type: none;
