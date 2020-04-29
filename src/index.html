@@ -22,6 +22,7 @@
 
   <!-- Application -->
   <link href="css/app.css" rel="stylesheet">
+  <link href="css/spinkit.min.css" rel="stylesheet">
 
 </head>
 
@@ -245,12 +246,44 @@
     </div>
   </div>
 
-  
+    
+  <div class="modal-loading" id ="modal-loading" hidden="true">
+      <h1> Please wait as the transaction is processed :)</h1>
 
-    <div id= "modal-purchase" hidden="true">
-      <h2> Here is your link</h2>
-      <h3 id ="purchaselink">Hello</h2>
+      <div class="sk-grid">
+        <div class="sk-grid-cube"></div>
+        <div class="sk-grid-cube"></div>
+        <div class="sk-grid-cube"></div>
+        <div class="sk-grid-cube"></div>
+        <div class="sk-grid-cube"></div>
+        <div class="sk-grid-cube"></div>
+        <div class="sk-grid-cube"></div>
+        <div class="sk-grid-cube"></div>
+        <div class="sk-grid-cube"></div>
+      </div>
+
+      <button type="button" class="close" onclick="App.CloseWindow();">&times;</button>
     </div>
+  </div>
+
+
+  <div class="modal-submission" id ="modal-submission" hidden="true">
+    <div id= "modal-sale" >
+      <h1> Your file has successfully been put up for sale</h1>
+          <button type="button" class="close" onclick="App.CloseSubmission();">&times;</button>
+    </div>
+  </div>
+  
+  <div class="modal-receipt" id ="modal-receipt" hidden="true">
+    <div id= "modal-purchase" >
+      <h1> Thank you for your purchase!</h1>
+      <h3 id ="purchaselink"></h2>
+          <button type="button" class="close" onclick="App.CloseReceipt();">&times;</button>
+    </div>
+  </div>
+
+ 
+
 
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
