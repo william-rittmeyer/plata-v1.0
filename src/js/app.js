@@ -134,9 +134,8 @@ App = {
             ).on("transactionHash", hash => {
                 console.log("transaction hash", hash);
                 $('#modal-loading').attr('hidden', false)
-                var background = document.getElementById("animation-area")
-                background.setAttribute("style", "filter: blur(2px);")
-                background.setAttribute("style", "filter: brightness(.4);")
+                App.blurBackground();
+
 
               //  $('#animation-area').style.filter.blur(2px);
                 //App.logBuyArticleEventListener = marketInstance.LogBuyArticle({fromBlock: '0'}).on("data", event => {
@@ -146,18 +145,16 @@ App = {
             console.log("transaction receipt" + transactionReceipt);
             $('#modal-loading').attr('hidden', true);
             $('#modal-submission').attr('hidden', false);
-            var background = document.getElementById("animation-area")
-            background.setAttribute("style", "filter: blur(2px);")
-            background.setAttribute("style", "filter: brightness(.4);")
+            App.blurBackground();
+
 
 
         } catch(error) {
             console.error(error);
             $('#modal-loading').attr('hidden', true);
             $('#modal-error').attr('hidden', false);
-            var background = document.getElementById("animation-area");
-            background.setAttribute("style", "filter: blur(2px);");
-            background.setAttribute("style", "filter: brightness(.4);");
+            App.blurBackground();
+
 
 
 
@@ -200,9 +197,8 @@ App = {
                     console.log(event.returnValues._seller);
                     $('#purchaselink').text('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
                     $('#modal-loading').attr('hidden', false);
-                    var background = document.getElementById("animation-area");
-                    background.setAttribute("style", "filter: blur(2px);");
-                    background.setAttribute("style", "filter: brightness(.4);");
+                    App.blurBackground();
+
                 } else {
                     return
                 }});
@@ -231,9 +227,8 @@ App = {
             console.log("transaction receipt", transactionReceipt);
             $('#modal-loading').attr('hidden', true);
             $('#modal-receipt').attr('hidden', false);
-            var background = document.getElementById("animation-area");
-            background.setAttribute("style", "filter: blur(2px);");
-            background.setAttribute("style", "filter: brightness(.4);");
+            App.blurBackground();
+
 
 
             
@@ -272,9 +267,8 @@ App = {
             console.error(error);
             $('#modal-loading').attr('hidden', true);
             $('#modal-error').attr('hidden', false);
-            var background = document.getElementById("animation-area");
-            background.setAttribute("style", "filter: blur(2px);");
-            background.setAttribute("style", "filter: brightness(.4);");
+            App.blurBackground();
+          
         }
     },
 
@@ -334,9 +328,7 @@ App = {
     CloseReceipt: async () => {
         $('#modal-receipt').attr('hidden', true);
         console.log('hello');
-        var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: blur(0px);");
-        background.setAttribute("style", "filter: brightness(1);");
+        App.unblurBackground();
 
 
     },
@@ -344,9 +336,7 @@ App = {
     CloseSubmission: async () => {
         $('#modal-submission').attr('hidden', true);
         console.log('closed submission');
-        var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: blur(0px);");
-        background.setAttribute("style", "filter: brightness(1);");
+        App.unblurBackground();
 
 
     },
@@ -355,9 +345,7 @@ App = {
     CloseWindow: async () => {
         $('#modal-loading').attr('hidden', true);
         console.log('hello');
-        var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: blur(0px);");
-        background.setAttribute("style", "filter: brightness(1);");
+        App.unblurBackground();
 
 
     },
@@ -367,27 +355,19 @@ App = {
     CloseError: async () => {
         $('#modal-error').attr('hidden', true);
         console.log('hello');
-        var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: blur(0px);");
-        background.setAttribute("style", "filter: brightness(1);");
+        App.unblurBackground();
 
 
     },
 
     blurBackground: async () => {
         var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: blur(2px);");
-        background.setAttribute("style", "filter: brightness(.4);");
-
-
+        background.setAttribute("style", "filter: blur(4px) brightness(.5);");
     },
 
     unblurBackground: async () => {
         var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: blur(0px);");
-        background.setAttribute("style", "filter: brightness(1);");
-
-
+        background.setAttribute("style", "filter: blur(0px) brightness(1);");
     },
     
 };
@@ -400,4 +380,3 @@ $(function () {
         App.init();
     });
 });
-
