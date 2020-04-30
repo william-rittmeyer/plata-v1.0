@@ -88,6 +88,7 @@
 
 }
 
+
 .box-area{
     position: absolute;
     top: 0;
@@ -390,7 +391,7 @@
 }
 
 .modal-submission h1{
-    
+
     font-size: 20px;
     position: absolute;
     top:50px;
