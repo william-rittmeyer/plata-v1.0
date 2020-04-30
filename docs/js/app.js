@@ -134,6 +134,11 @@ App = {
             ).on("transactionHash", hash => {
                 console.log("transaction hash", hash);
                 $('#modal-loading').attr('hidden', false)
+                var background = document.getElementById("animation-area")
+                background.setAttribute("style", "filter: blur(2px);")
+                background.setAttribute("style", "filter: brightness(.4);")
+
+              //  $('#animation-area').style.filter.blur(2px);
                 //App.logBuyArticleEventListener = marketInstance.LogBuyArticle({fromBlock: '0'}).on("data", event => {
                     
             //    })
@@ -141,11 +146,19 @@ App = {
             console.log("transaction receipt" + transactionReceipt);
             $('#modal-loading').attr('hidden', true);
             $('#modal-submission').attr('hidden', false);
+            var background = document.getElementById("animation-area")
+            background.setAttribute("style", "filter: blur(2px);")
+            background.setAttribute("style", "filter: brightness(.4);")
+
 
         } catch(error) {
             console.error(error);
             $('#modal-loading').attr('hidden', true);
             $('#modal-error').attr('hidden', false);
+            var background = document.getElementById("animation-area");
+            background.setAttribute("style", "filter: blur(2px);");
+            background.setAttribute("style", "filter: brightness(.4);");
+
 
 
         }
@@ -186,7 +199,10 @@ App = {
                     console.log(event.returnValues._name);
                     console.log(event.returnValues._seller);
                     $('#purchaselink').text('https://ipfs.infura.io/ipfs/' + event.returnValues._hashvalue);
-                    $('#modal-loading').attr('hidden', false)
+                    $('#modal-loading').attr('hidden', false);
+                    var background = document.getElementById("animation-area");
+                    background.setAttribute("style", "filter: blur(2px);");
+                    background.setAttribute("style", "filter: brightness(.4);");
                 } else {
                     return
                 }});
@@ -213,8 +229,12 @@ App = {
                 
             
             console.log("transaction receipt", transactionReceipt);
-            $('#modal-loading').attr('hidden', true)
-            $('#modal-receipt').attr('hidden', false)
+            $('#modal-loading').attr('hidden', true);
+            $('#modal-receipt').attr('hidden', false);
+            var background = document.getElementById("animation-area");
+            background.setAttribute("style", "filter: blur(2px);");
+            background.setAttribute("style", "filter: brightness(.4);");
+
 
             
 
@@ -252,6 +272,9 @@ App = {
             console.error(error);
             $('#modal-loading').attr('hidden', true);
             $('#modal-error').attr('hidden', false);
+            var background = document.getElementById("animation-area");
+            background.setAttribute("style", "filter: blur(2px);");
+            background.setAttribute("style", "filter: brightness(.4);");
         }
     },
 
@@ -309,20 +332,61 @@ App = {
     },
 
     CloseReceipt: async () => {
-        $('#modal-receipt').attr('hidden', true)
-        console.log('hello')
+        $('#modal-receipt').attr('hidden', true);
+        console.log('hello');
+        var background = document.getElementById("animation-area");
+        background.setAttribute("style", "filter: blur(0px);");
+        background.setAttribute("style", "filter: brightness(1);");
+
 
     },
 
     CloseSubmission: async () => {
-        $('#modal-submission').attr('hidden', true)
-        console.log('closed submission')
+        $('#modal-submission').attr('hidden', true);
+        console.log('closed submission');
+        var background = document.getElementById("animation-area");
+        background.setAttribute("style", "filter: blur(0px);");
+        background.setAttribute("style", "filter: brightness(1);");
+
 
     },
 
+
     CloseWindow: async () => {
-        $('#modal-loading').attr('hidden', true)
-        console.log('hello')
+        $('#modal-loading').attr('hidden', true);
+        console.log('hello');
+        var background = document.getElementById("animation-area");
+        background.setAttribute("style", "filter: blur(0px);");
+        background.setAttribute("style", "filter: brightness(1);");
+
+
+    },
+
+
+
+    CloseError: async () => {
+        $('#modal-error').attr('hidden', true);
+        console.log('hello');
+        var background = document.getElementById("animation-area");
+        background.setAttribute("style", "filter: blur(0px);");
+        background.setAttribute("style", "filter: brightness(1);");
+
+
+    },
+
+    blurBackground: async () => {
+        var background = document.getElementById("animation-area");
+        background.setAttribute("style", "filter: blur(2px);");
+        background.setAttribute("style", "filter: brightness(.4);");
+
+
+    },
+
+    unblurBackground: async () => {
+        var background = document.getElementById("animation-area");
+        background.setAttribute("style", "filter: blur(0px);");
+        background.setAttribute("style", "filter: brightness(1);");
+
 
     },
     
