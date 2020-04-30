@@ -362,12 +362,12 @@ App = {
 
     blurBackground: async () => {
         var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: blur(4px) brightness(.5);");
+        background.setAttribute("style", "filter: brightness(.5);");
     },
 
     unblurBackground: async () => {
         var background = document.getElementById("animation-area");
-        background.setAttribute("style", "filter: blur(0px) brightness(1);");
+        background.setAttribute("style", "filter: brightness(1);");
     },
     
 };
