@@ -28,12 +28,15 @@
 
 }
 
+
 .placeholder-logo{
     width: 70px;
     height: auto;
     position: fixed;
     left: 180px;
     top:20px;
+    z-index: 0;
+    
 }
 
 a:link {
@@ -555,5 +558,16 @@ a:link {
     position: fixed;
     left: 900px;;
     top:730px;
+}
+
+.front-link {
+    background-color: black;
+  color: white;
+  padding: 50px 100px;
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    z-index: 50;
 }
 
