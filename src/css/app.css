@@ -16,6 +16,50 @@
 
 }
 
+.home-title h2{
+    font-size: 40px;
+    font-weight: 400; 
+    color: #ffffff;
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    
+    z-index: 1;
+
+}
+
+.placeholder-logo{
+    width: 70px;
+    height: auto;
+    position: fixed;
+    left: 180px;
+    top:20px;
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color:white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color:blue;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
 
 
 .container{
@@ -349,7 +393,7 @@
 .navbar {
     position: absolute;
     left: 650px;
-    top:870px;
+    top:940px;
 }
 
 .navigation {
@@ -488,21 +532,22 @@
 }
 
 .ethereum-logo{
-    width: 60px;
+    width: 55px;
     height: auto;
     position: fixed;
     left: 800px;
-    top:730px;
+    top:810px;
     
 }
 
 .ipfs-logo{
-    width: 100px;
+    width: 90px;
     height: auto;
     position: fixed;
     left: 1000px;
-    top:730px;
+    top:810px;
 }
+
 
 .uga-engr{
     width: 300px;
