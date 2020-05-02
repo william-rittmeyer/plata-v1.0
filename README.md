@@ -1,4 +1,4 @@
-##Plata Ethereum Blockchain DApp
+## Plata Ethereum Blockchain DApp
 
 This is an Ethereum-based DApp on the Ropsten test network. With this application users are able to sell and buy data using "ether". Data itself is stored on the InterPlanetary File Server (IPFS), a decentralized cloud storage platform.
 
