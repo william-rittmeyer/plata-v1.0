@@ -1,12 +1,10 @@
-# ChainSkills Truffle Box
+#Plata Ethereum Blockchain DApp
 
-This Truffle Box has all you need to create a DApp by following the course delivered by [ChainSkills](https://www.udemy.com/getting-started-with-ethereum-solidity-development/).
+This is an Ethereum-based DApp on the Ropsten test network. With this application users are able to sell and buy data using "ether". Data itself is stored on the InterPlanetary File Server (IPFS), a decentralized cloud storage platform.
 
-This box has been based from [pet-shop-box](https://github.com/truffle-box/pet-shop-box).
+## In order for local development first execute the fol
 
-## Installation
-
-1. Install Truffle globally.
+1. In order for local development first execute the fol
     ```javascript
     npm install -g truffle
     ```
