@@ -7,7 +7,7 @@ https://witt-designs.github.io/plata_ethereum_blockchain/
 
 This is an Ethereum-based DApp on the Ropsten test network. With this application users are able to sell and buy data using "ether". Data itself is stored on the InterPlanetary File Server (IPFS), a decentralized cloud storage platform.This application also requires the user to use the extenstion Metamask; one can download this extension at that the following site: https://metamask.io/
 
-## For local development execute the following code:
+## For local development of frontend execute the following code:
 
 1. Download the repository
 
