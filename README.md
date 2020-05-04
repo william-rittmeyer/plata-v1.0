@@ -1,6 +1,6 @@
 ## Plata Ethereum Blockchain DApp
 
-Click this link to access deployed application:
+Click this link to access deployed application (note this application does not work on safari):
 
 https://witt-designs.github.io/plata_ethereum_blockchain/
 
